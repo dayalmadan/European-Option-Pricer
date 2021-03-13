@@ -11,7 +11,7 @@
 
 class EuropeanVanilla
 {
-    const double mStrikePrice; // strike price of the option
+    //const double mStrikePrice; // strike price of the option
 protected:
     double CDF(double x) const; // return cdf of standard normal distribution
     double PDF(double x) const; // pdf of x
@@ -19,8 +19,9 @@ protected:
     double DMinus() const; // d- = d+ - sigma * sqrt(T)
     
 public:
-    virtual double OptionPrice() const = 0; // black scholes option pricing calculation
-    virtual double OptionDelta() const = 0; // delta of option using BS
-    virtual double OptionGamma() const = 0; // gamme using BS
-    virtual double OptionTheta() const = 0; // theta using BS
+    double CallPrice() const; // call price using BSM model
+    double PutPrice() const; // put price using BSM model
+    double OptionDelta() const; // delta of option using BS
+    double OptionGamma() const; // gamme using BS
+    double OptionTheta() const; // theta using BS
 };

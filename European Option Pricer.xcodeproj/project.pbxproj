@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6A85ABD125FD694800877E64 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A85ABD025FD694800877E64 /* main.cpp */; };
+		6A85ABDD25FD6A6200877E64 /* EuropeanPut.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A85ABD825FD6A6100877E64 /* EuropeanPut.cpp */; };
+		6A85ABDE25FD6A6200877E64 /* EuropeanVanilla.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A85ABD925FD6A6100877E64 /* EuropeanVanilla.cpp */; };
+		6A85ABDF25FD6A6200877E64 /* EuropeanCall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A85ABDB25FD6A6200877E64 /* EuropeanCall.cpp */; };
+		6A85ABE225FD6D3000877E64 /* EuropeanOption.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6A85ABE025FD6D3000877E64 /* EuropeanOption.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +29,14 @@
 /* Begin PBXFileReference section */
 		6A85ABCD25FD694800877E64 /* European Option Pricer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "European Option Pricer"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A85ABD025FD694800877E64 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6A85ABD725FD6A6100877E64 /* EuropeanVanilla.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EuropeanVanilla.h; sourceTree = "<group>"; };
+		6A85ABD825FD6A6100877E64 /* EuropeanPut.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuropeanPut.cpp; sourceTree = "<group>"; };
+		6A85ABD925FD6A6100877E64 /* EuropeanVanilla.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuropeanVanilla.cpp; sourceTree = "<group>"; };
+		6A85ABDA25FD6A6200877E64 /* EuropeanCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EuropeanCall.h; sourceTree = "<group>"; };
+		6A85ABDB25FD6A6200877E64 /* EuropeanCall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuropeanCall.cpp; sourceTree = "<group>"; };
+		6A85ABDC25FD6A6200877E64 /* EuropeanPut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EuropeanPut.h; sourceTree = "<group>"; };
+		6A85ABE025FD6D3000877E64 /* EuropeanOption.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EuropeanOption.cpp; sourceTree = "<group>"; };
+		6A85ABE125FD6D3000877E64 /* EuropeanOption.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EuropeanOption.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,14 @@
 			isa = PBXGroup;
 			children = (
 				6A85ABD025FD694800877E64 /* main.cpp */,
+				6A85ABE125FD6D3000877E64 /* EuropeanOption.h */,
+				6A85ABE025FD6D3000877E64 /* EuropeanOption.cpp */,
+				6A85ABD725FD6A6100877E64 /* EuropeanVanilla.h */,
+				6A85ABD925FD6A6100877E64 /* EuropeanVanilla.cpp */,
+				6A85ABDB25FD6A6200877E64 /* EuropeanCall.cpp */,
+				6A85ABDA25FD6A6200877E64 /* EuropeanCall.h */,
+				6A85ABD825FD6A6100877E64 /* EuropeanPut.cpp */,
+				6A85ABDC25FD6A6200877E64 /* EuropeanPut.h */,
 			);
 			path = "European Option Pricer";
 			sourceTree = "<group>";
@@ -119,6 +139,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A85ABE225FD6D3000877E64 /* EuropeanOption.cpp in Sources */,
+				6A85ABDF25FD6A6200877E64 /* EuropeanCall.cpp in Sources */,
+				6A85ABDE25FD6A6200877E64 /* EuropeanVanilla.cpp in Sources */,
+				6A85ABDD25FD6A6200877E64 /* EuropeanPut.cpp in Sources */,
 				6A85ABD125FD694800877E64 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

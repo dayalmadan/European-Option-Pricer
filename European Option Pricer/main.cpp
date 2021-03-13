@@ -7,6 +7,9 @@
 //
 
 #include <iostream>
+#include "EuropeanOption.h"
+
+using namespace std;
 
 int main()
 {

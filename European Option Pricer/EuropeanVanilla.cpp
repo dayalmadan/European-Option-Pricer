@@ -7,6 +7,8 @@
 //
 
 #include "EuropeanVanilla.h"
+#include <iostream>
+using namespace std;
 
 double EuropeanVanilla::PDF(double x) const // probability density function
 {
@@ -62,9 +64,9 @@ double EuropeanVanilla::ImpliedVolatility(const double UnderlyingPrice, const do
 {
     const double YearsToExpiry = DaysToExpiry / 365.0;
     if (CallPut == 'C')
-        return NewtonRaphsonSolver(&EuropeanVanilla::CallPriceByBS, UnderlyingPrice, InterestRate, YearsToExpiry, OptionPrice, 1.0);
+        return NewtonRaphsonSolver(&EuropeanVanilla::CallPriceByBS, UnderlyingPrice, InterestRate, YearsToExpiry, OptionPrice, 0.5);
     else if (CallPut == 'P')
-        return NewtonRaphsonSolver(&EuropeanVanilla::PutPriceByBS, UnderlyingPrice, InterestRate, YearsToExpiry, OptionPrice, 1.0);
+        return NewtonRaphsonSolver(&EuropeanVanilla::PutPriceByBS, UnderlyingPrice, InterestRate, YearsToExpiry, OptionPrice, 0.5);
     
     return 0;
 }
@@ -75,11 +77,15 @@ double EuropeanVanilla::NewtonRaphsonSolver(double (EuropeanVanilla::*BSMPrice)(
     double XPrev = Guess;
     double SecondDerivative = UnderlyingPrice * PDF(DPlus(UnderlyingPrice, InterestRate, YearsToExpiry, XPrev)) * sqrt(YearsToExpiry); // vega in this case
     double XNext = XPrev - ((this->*BSMPrice)(UnderlyingPrice, InterestRate, YearsToExpiry, XPrev) - Target) / SecondDerivative;
+    //double Price = (this->*BSMPrice)(UnderlyingPrice, InterestRate, YearsToExpiry, XPrev);
+    //cout << XPrev << " " << SecondDerivative << " " << XNext << " " << Price << " " << Target << endl;
     while (abs(XNext - XPrev) > Accuracy)
     {
         XPrev = XNext;
         SecondDerivative = UnderlyingPrice * PDF(DPlus(UnderlyingPrice, InterestRate, YearsToExpiry, XPrev)) * sqrt(YearsToExpiry);
         XNext = XPrev - ((this->*BSMPrice)(UnderlyingPrice, InterestRate, YearsToExpiry, XPrev) - Target) / SecondDerivative;
+        //double Price = (this->*BSMPrice)(UnderlyingPrice, InterestRate, YearsToExpiry, XPrev);
+        //cout << XPrev << " " << SecondDerivative << " " << XNext << " " << Price << " " << Target << endl;
     }
     return XNext;
 }

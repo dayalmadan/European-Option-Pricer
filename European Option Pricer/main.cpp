@@ -24,5 +24,10 @@ int main()
     cout << "Call Price: " << pricer.CallPrice << endl;
     cout << "Put Price: " << pricer.PutPrice << endl;
     
+    //pricer.CallPrice = 5;
+    //pricer.PutPrice = 10;
+    
+    cout << "Call IV: " << pricer.ImpliedVolatility(S0, r, T, pricer.CallPrice, 'C') << endl;
+    cout << "Put IV: " << pricer.ImpliedVolatility(S0, r, T, pricer.PutPrice, 'P') << endl;
     return 0;
 }

@@ -11,17 +11,17 @@
 
 class EuropeanVanilla
 {
-    //const double mStrikePrice; // strike price of the option
-protected:
+    const double mStrikePrice; // strike price of the option
+    
     double CDF(double x) const; // return cdf of standard normal distribution
     double PDF(double x) const; // pdf of x
-    double DPlus() const; // d+ = (log(S0/K) + (r + sigmaˆ2) * T) / (sigma * sqrt(T))
-    double DMinus() const; // d- = d+ - sigma * sqrt(T)
+    double DPlus(const double UnderlyingPrice, const double InterestRate, const double YearsToExpiry, const double Volatility) const; // d+ = (log(S0/K) + (r + sigmaˆ2) * T) / (sigma * sqrt(T))
     
 public:
-    double CallPrice() const; // call price using BSM model
-    double PutPrice() const; // put price using BSM model
-    double OptionDelta() const; // delta of option using BS
-    double OptionGamma() const; // gamme using BS
-    double OptionTheta() const; // theta using BS
+    
+    EuropeanVanilla(const double StrikePrice): mStrikePrice(StrikePrice) {};
+    
+    void UpdatePriceAndGreeks(const double UnderlyingPrice, const double InterestRate, const double DaysToExpiry, const double Volatility); // update call/put price and greeks
+    
+    double CallPrice, PutPrice, CallDelta, PutDelta, CallGamma, PutGamma, CallTheta, PutTheta, CallVega, PutVega;
 };

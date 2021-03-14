@@ -15,7 +15,7 @@ int main()
 {
     const double S0 = 15;
     const double K = 15;
-    const double T = 1277.5;
+    const double T = 1277.5; // in days
     const double r = 0.05;
     const double sigma = 0.2;
     EuropeanVanilla pricer(K);

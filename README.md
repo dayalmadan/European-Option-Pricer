@@ -8,7 +8,7 @@ Add EuropeanVanilla.h and EuropeanVanilla.cpp in your project.
 
 ## Option Price and Greeks Example
 
-### The UpdatePriceAndGreeks method gives prices, deltas, gammas, thetas, and vegas of both call and put option
+### The 'UpdatePriceAndGreeks' method gives prices, deltas, gammas, thetas, and vegas of both call and put option
 
 double StrikePrice = 20;
 
@@ -57,3 +57,7 @@ cout << pricer.PutVega << endl;
 ## Implied Volatility Example
 
 #### The class implements Newton-Raphson method which converges faster
+
+cout << "Call IV: " << pricer.ImpliedVolatility(StockPrice, InterestRate, DaysToExpiry, CallPrice, 'C') << endl;
+
+cout << "Put IV: " << pricer.ImpliedVolatility(StockPrice, InterestRate, DaysToExpiry, PutPrice, 'P') << endl;

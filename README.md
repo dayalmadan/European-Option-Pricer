@@ -6,15 +6,19 @@ European Vanilla Call and Put Option pricing and Implied Volatility calculation 
 
 Add EuropeanVanilla.h and EuropeanVanilla.cpp in your project.
 
-## Code Example
+## Option Price and Greeks Example
 
 double StrikePrice = 20;
+
 EuropeanVanilla pricer(StrikePrice);
 
 
 double StockPrice = 15;
+
 double DaysToExpiry = 30;
+
 double InterestRate = 0.05;
+
 double Volatility = 0.2;
 
 pricer.UpdatePriceAndGreeks(StockPrice, InterestRate, DaysToExpiry, Volatility);
@@ -56,3 +60,8 @@ cout << pricer.PutTheta << endl;
 cout << pricer.CallVega << endl;
 
 cout << pricer.PutVega << endl;
+
+
+## Implied Volatility Example
+
+#### The class implements Newton-Raphson method, which converges faster

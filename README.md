@@ -9,16 +9,12 @@ Add EuropeanVanilla.h and EuropeanVanilla.cpp in your project.
 ## Code Example
 
 double StrikePrice = 20;
-
 EuropeanVanilla pricer(StrikePrice);
 
 
 double StockPrice = 15;
-
 double DaysToExpiry = 30;
-
 double InterestRate = 0.05;
-
 double Volatility = 0.2;
 
 pricer.UpdatePriceAndGreeks(StockPrice, InterestRate, DaysToExpiry, Volatility);

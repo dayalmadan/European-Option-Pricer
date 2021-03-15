@@ -28,6 +28,7 @@
 		6A85ABD025FD694800877E64 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		6A85ABD725FD6A6100877E64 /* EuropeanVanilla.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EuropeanVanilla.h; sourceTree = "<group>"; };
 		6A85ABD925FD6A6100877E64 /* EuropeanVanilla.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EuropeanVanilla.cpp; sourceTree = "<group>"; };
+		6ADB215125FF44DE00498F32 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +45,7 @@
 		6A85ABC425FD694800877E64 = {
 			isa = PBXGroup;
 			children = (
+				6ADB215125FF44DE00498F32 /* README.md */,
 				6A85ABCF25FD694800877E64 /* European Option Pricer */,
 				6A85ABCE25FD694800877E64 /* Products */,
 			);

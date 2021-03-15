@@ -23,7 +23,9 @@ double Volatility = 0.2;
 
 pricer.UpdatePriceAndGreeks(StockPrice, InterestRate, DaysToExpiry, Volatility);
 
+
 The UpdatePriceAndGreeks method gives prices, deltas, gammas, thetas, and vegas of both call and put option
+
 
 // Option Price
 
@@ -58,8 +60,3 @@ cout << pricer.PutTheta << endl;
 cout << pricer.CallVega << endl;
 
 cout << pricer.PutVega << endl;
-
-
-
-
-

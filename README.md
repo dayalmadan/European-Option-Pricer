@@ -27,35 +27,35 @@ pricer.UpdatePriceAndGreeks(StockPrice, InterestRate, DaysToExpiry, Volatility);
 The UpdatePriceAndGreeks method gives prices, deltas, gammas, thetas, and vegas of both call and put option
 
 
-// Option Price
+### Option Price
 
 cout << pricer.CallPrice << endl;
 
 cout << pricer.PutPrice << endl;
 
 
-// Option Delta
+### Option Delta
 
 cout << pricer.CallDelta << endl;
 
 cout << pricer.PutDelta << endl;
 
 
-// Option Gamma
+### Option Gamma
 
 cout << pricer.CallGamma << endl;
 
 cout << pricer.PutGamma << endl;
 
 
-// Option Theta
+### Option Theta
 
 cout << pricer.CallTheta << endl;
 
 cout << pricer.PutTheta << endl;
 
 
-// Option Vega
+### Option Vega
 
 cout << pricer.CallVega << endl;
 
@@ -64,4 +64,4 @@ cout << pricer.PutVega << endl;
 
 ## Implied Volatility Example
 
-#### The class implements Newton-Raphson method, which converges faster
+#### The class implements Newton-Raphson method which converges faster

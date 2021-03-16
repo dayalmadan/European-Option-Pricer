@@ -12,7 +12,7 @@ Add EuropeanVanilla.h and EuropeanVanilla.cpp in your project.
 
 double StrikePrice = 20;
 
-EuropeanVanilla pricer(StrikePrice);
+EuropeanVanilla pricer(StrikePrice); // class object requires strike price
 
 double StockPrice = 15;
 

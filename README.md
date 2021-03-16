@@ -52,5 +52,3 @@ cout << pricer.PutVega << endl;<br>
 cout << "Call IV: " << pricer.ImpliedVolatility(StockPrice, InterestRate, DaysToExpiry, CallPrice, 'C') << endl;<br>
 
 cout << "Put IV: " << pricer.ImpliedVolatility(StockPrice, InterestRate, DaysToExpiry, PutPrice, 'P') << endl;<br>
-
- 

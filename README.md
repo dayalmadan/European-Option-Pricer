@@ -11,14 +11,14 @@ Add EuropeanVanilla.h and EuropeanVanilla.cpp in your project.
 ### The 'UpdatePriceAndGreeks' method gives prices, deltas, gammas, thetas, and vegas of both call and put option
 
 double StrikePrice = 20;<br>
-EuropeanVanilla pricer(StrikePrice);<br>
+EuropeanVanilla pricer(StrikePrice); // class object requires strike price <br>
 
 double StockPrice = 15;<br>
 double DaysToExpiry = 30;<br>
 double InterestRate = 0.05;<br>
 double Volatility = 0.2;<br>
 
-pricer.UpdatePriceAndGreeks(StockPrice, InterestRate, DaysToExpiry, Volatility);<br>
+pricer.UpdatePriceAndGreeks(StockPrice, InterestRate, DaysToExpiry, Volatility); // calculate price and greeks and updates public members <br>
 
 #### Option Price
 

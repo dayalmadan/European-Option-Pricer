@@ -10,54 +10,46 @@ Add EuropeanVanilla.h and EuropeanVanilla.cpp in your project.
 
 ### The 'UpdatePriceAndGreeks' method gives prices, deltas, gammas, thetas, and vegas of both call and put option
 
-double StrikePrice = 20;
+double StrikePrice = 20;<br>
+EuropeanVanilla pricer(StrikePrice);<br>
 
-EuropeanVanilla pricer(StrikePrice); // class object requires strike price
+double StockPrice = 15;<br>
+double DaysToExpiry = 30;<br>
+double InterestRate = 0.05;<br>
+double Volatility = 0.2;<br>
 
-double StockPrice = 15;
-
-double DaysToExpiry = 30;
-
-double InterestRate = 0.05;
-
-double Volatility = 0.2;
-
-pricer.UpdatePriceAndGreeks(StockPrice, InterestRate, DaysToExpiry, Volatility);
+pricer.UpdatePriceAndGreeks(StockPrice, InterestRate, DaysToExpiry, Volatility);<br>
 
 #### Option Price
 
-cout << pricer.CallPrice << endl;
-
-cout << pricer.PutPrice << endl;
+cout << pricer.CallPrice << endl;<br>
+cout << pricer.PutPrice << endl;<br>
 
 #### Option Delta
 
-cout << pricer.CallDelta << endl;
-
-cout << pricer.PutDelta << endl;
+cout << pricer.CallDelta << endl;<br>
+cout << pricer.PutDelta << endl;<br>
 
 #### Option Gamma
 
-cout << pricer.CallGamma << endl;
-
-cout << pricer.PutGamma << endl;
+cout << pricer.CallGamma << endl;<br>
+cout << pricer.PutGamma << endl;<br>
 
 #### Option Theta
 
-cout << pricer.CallTheta << endl;
-
-cout << pricer.PutTheta << endl;
+cout << pricer.CallTheta << endl;<br>
+cout << pricer.PutTheta << endl;<br>
 
 #### Option Vega
 
-cout << pricer.CallVega << endl;
-
-cout << pricer.PutVega << endl;
+cout << pricer.CallVega << endl;<br>
+cout << pricer.PutVega << endl;<br>
 
 ## Implied Volatility Example
 
 #### The class implements Newton-Raphson method which converges faster
 
-cout << "Call IV: " << pricer.ImpliedVolatility(StockPrice, InterestRate, DaysToExpiry, CallPrice, 'C') << endl;
+cout << "Call IV: " << pricer.ImpliedVolatility(StockPrice, InterestRate, DaysToExpiry, CallPrice, 'C') << endl;<br>
 
-cout << "Put IV: " << pricer.ImpliedVolatility(StockPrice, InterestRate, DaysToExpiry, PutPrice, 'P') << endl;
+cout << "Put IV: " << pricer.ImpliedVolatility(StockPrice, InterestRate, DaysToExpiry, PutPrice, 'P') << endl;<br>
+

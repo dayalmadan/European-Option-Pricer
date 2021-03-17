@@ -30,5 +30,4 @@ public:
     double CallPrice, PutPrice, CallDelta, PutDelta, CallGamma, PutGamma, CallTheta, PutTheta, CallVega, PutVega;
     
     double ImpliedVolatility(const double UnderlyingPrice, const double InterestRate, const double DaysToExpiry, const double OptionPrice, const char CallPut); // calculate implied volatility of call or put option given market parameters
-    
 };
